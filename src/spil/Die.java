@@ -13,17 +13,19 @@ private int faceValue;
 public int faceAmount;
 
 
+    //---------------------------
+    //Constructor for Die klassen
+    //---------------------------
     public Die(int faceAmount){
         this.faceAmount = faceAmount;
-
     }
 
 
 
 
-    //---------------
-    //Ruller terning
-    //---------------
+    //-----------------------------------
+    //Ruller terning og returner resultatet
+    //-----------------------------------
     public int rul() {
         Random r = new Random();
         this.faceValue = r.nextInt(this.faceAmount) + 1;
