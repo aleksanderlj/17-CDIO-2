@@ -1,16 +1,11 @@
 package gui;
-// Jonatan 10:30
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+// Jonatan 10:30 - 12:40
 import java.util.Scanner;
 
 public class TUI {
-    public static void main(String[] args){
-        String[] languageArray;
-        languageArray = new String[10];
+    private static String[] languageArray;
 
+    public static void startGame() {
         String startGame;
         startGame = "Velkommen til spillet Goldmine (Welcome to the game Goldmine).\n";
         System.out.println(startGame);
@@ -19,45 +14,25 @@ public class TUI {
         changeLanguage = "Vælg venligst et sprog (Please choose a language).\n" +
                 "For at vælge dansk så klik 1 og Enter. To choose english press 2 and Enter.";
         System.out.println(changeLanguage);
+        languageArray = Language.choseLanguage();
+        System.out.println(languageArray[0] + "\n");
+    }
 
+    public static void main(String[] args) {
+        TUI.startGame();
+        /*
+        String name1,name2;
+        Scanner input2 = new Scanner(System.in);
 
-        Scanner input = new Scanner(System.in);
-        int chosenLanguage;
-        chosenLanguage = input.nextInt();
+        System.out.print(languageArray[2]);
+        name1 = input2.nextLine();
+        System.out.println();
 
-        if (chosenLanguage == 1){
-            try {
-                String file = "src/gui/DanskTekst.txt";
-                BufferedReader reader = new BufferedReader(new FileReader(file));
-                for (int i = 0;(i < 10);i++) {
-                    String currentLine = reader.readLine();
-                    languageArray[i] = currentLine;
-                }
-                reader.close();
+        System.out.println(languageArray[3]);
+        name2 = input2.nextLine();
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-        else {
-            try {
-                String file = "src/gui/EngelskTekst.txt";
-                BufferedReader reader = new BufferedReader(new FileReader(file));
-                for (int i = 0;(i < 10);i++) {
-                    String currentLine = reader.readLine();
-                    languageArray[i] = currentLine;
-                    System.out.println(languageArray[i]);
-                }
-                reader.close();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-
-
+        System.out.println(name1);
+        System.out.println(name2);
+        */
     }
 }
