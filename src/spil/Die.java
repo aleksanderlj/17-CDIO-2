@@ -10,13 +10,26 @@ import java.util.Random;
 
 public class Die {
 private int faceValue;
+public int faceAmount;
 
-    //---------------
-    //Ruller terning
-    //---------------
-    public void rul() {
+
+    //---------------------------
+    //Constructor for Die klassen
+    //---------------------------
+    public Die(int faceAmount){
+        this.faceAmount = faceAmount;
+    }
+
+
+
+
+    //-----------------------------------
+    //Ruller terning og returner resultatet
+    //-----------------------------------
+    public int rul() {
         Random r = new Random();
-        this.faceValue = r.nextInt(6) + 1;
+        this.faceValue = r.nextInt(this.faceAmount) + 1;
+        return this.faceValue;
     }
 
 
