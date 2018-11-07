@@ -37,20 +37,30 @@ public class Game {
     }
     */
 
-    //--------------------------------------------------------------------------------------------------
-    // Laver et par terninger og sørger for, at de samlede ansigter ikke overstiger 12 eller er under 2
-    //--------------------------------------------------------------------------------------------------
+    //------------------------
+    // Laver et par terninger
+    //------------------------
     public static void createDiePair(int face1, int face2){
         die[0] = new Die(face1);
         die[1] = new Die(face2);
     }
 
+    /*
     //------------------------------
     // Laver en spiller med et navn
     //------------------------------
     public static void createPlayer(String name){
         player[playerIndex] = new Player(name);
         playerIndex++;
+    }
+    */
+
+    //-----------------------
+    // Laver et par spillere
+    //-----------------------
+    public static void createPlayerPair(String name1, String name2){
+        player[0] = new Player(name1);
+        player[1] = new Player(name2);
     }
 
     //-----------------------------------------------------------------------------------------

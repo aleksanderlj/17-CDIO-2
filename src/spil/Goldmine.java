@@ -4,31 +4,34 @@ import gui.*;
 
 public class Goldmine {
     public static void main(String[] args){
+        boolean correctDieValue;
+        String namePlayer1, namePlayer2;
+
         // Choose language
         TUI.startGame();
         TUI.language();
         TUI.printLanguage();
 
         // Choose dice
-        boolean correctDieValue;
         do {
             TUI.printChooseDice();
 
-            int dieFace1 = TUI.getDieFace(0);
-            int dieFace2 = TUI.getDieFace(1);
-            int dieFaceSum = dieFace1 + dieFace2;
+            int dieFaceAmount1 = TUI.getDieFace(0);
+            int dieFaceAmount2 = TUI.getDieFace(1);
+            int dieFaceSum = dieFaceAmount1 + dieFaceAmount2;
             correctDieValue = (((dieFaceSum <= 12) && (dieFaceSum >= 2)) &&
-                              ((dieFace1 < 12) && (dieFace1 > 0)) &&
-                              ((dieFace2 < 12) && (dieFace2 > 0)));
+                              ((dieFaceAmount1 < 12) && (dieFaceAmount1 > 0)) &&
+                              ((dieFaceAmount2 < 12) && (dieFaceAmount2 > 0)));
 
-            Game.createDiePair(dieFace1, dieFace2);
+            Game.createDiePair(dieFaceAmount1, dieFaceAmount2);
         } while (!correctDieValue);
 
         // Choose name
         TUI.chooseNames();
+        namePlayer1 = TUI.getName(0);
+        namePlayer2 = TUI.getName(1);
 
-        Game.createPlayer(TUI.getName(0));
-        Game.createPlayer(TUI.getName(1));
+        Game.createPlayerPair(namePlayer1, namePlayer2);
 
 
         // Play game
