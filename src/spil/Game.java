@@ -88,20 +88,16 @@ public class Game {
         return ((player[0].getScore() >= WINSCORE) || (player[1].getScore() >= WINSCORE));
     }
 
-    //-------------------------------------------
-    // Printer navnet på vinderen hvis der er en
-    //-------------------------------------------
-    public static String winner(){
-        String winner;
+    //------------------------------------------------------------------------------------------------
+    // Printer 1 hvis Spiller 1 har vundet, 2 hvis Spiller 2 har vundet og 3 hvis de begge har vundet
+    //------------------------------------------------------------------------------------------------
+    public static int winner(){
+        int winner = 0;
 
-        if ((player[0].getScore() >= WINSCORE) && (player[1].getScore() >= WINSCORE))
-            winner = "Begge";
-        else if (player[0].getScore() >= WINSCORE)
-            winner = player[0].getName();
-        else if (player[1].getScore() >= WINSCORE)
-            winner = player[1].getName();
-        else
-            winner = "Ingen";
+        if (player[0].getScore() >= WINSCORE)
+            winner += 1;
+        if (player[1].getScore() >= WINSCORE)
+            winner += 2;
 
         return winner;
     }
