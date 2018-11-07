@@ -12,7 +12,7 @@ public class TUI {
     //--------------------------------------
     // Printer den første tekst i programmet
     //--------------------------------------
-    private static void startGame() {
+    public static void startGame() {
         String startGame;
         startGame = "Velkommen til spillet Goldmine (Welcome to the game Goldmine).\n";
         System.out.println(startGame);
