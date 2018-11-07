@@ -8,12 +8,14 @@ import spil.Player;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RulesTest {
+    spil.Account testKonto = new Account();
+    spil.Player testSpiller1 = new Player("1");
+    spil.Player testSpiller2 = new Player("2");
+
 
     //Tester at spillerens konto kan komme under 0
-
     @Test
     void minimum(){
-        spil.Account testKonto = new Account();
         for (int i = 0; i < 30; i++) {
             testKonto.addScore(GameStub.minusscoreStub());
         }
@@ -21,10 +23,9 @@ public class RulesTest {
     }
 
     //Tester at en spiller vinder ved 3000 points
-
     @Test
     void vinde(){
-
+        testSpiller1.addScore(GameStub.plusscoreStub());
 
     }
 
