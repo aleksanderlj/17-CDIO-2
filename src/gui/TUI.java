@@ -1,11 +1,13 @@
 package gui;
-// Jonatan 10:30 - 12:40
+// Jonatan 10:30 - 12:40. 11:45
 import java.util.Scanner;
 
 public class TUI {
     private static String[] languageArray;
+    private static String name1, name2;
+    private static int playerTurn, score1, score2;
 
-    public static void startGame() {
+    private static void startGame() {
         String startGame;
         startGame = "Velkommen til spillet Goldmine (Welcome to the game Goldmine).\n";
         System.out.println(startGame);
@@ -18,21 +20,13 @@ public class TUI {
         System.out.println(languageArray[0] + "\n");
     }
 
-    public static void main(String[] args) {
+    private static void Names() {
         TUI.startGame();
-        /*
-        String name1,name2;
-        Scanner input2 = new Scanner(System.in);
 
+        Scanner names = new Scanner(System.in);
         System.out.print(languageArray[2]);
-        name1 = input2.nextLine();
-        System.out.println();
-
-        System.out.println(languageArray[3]);
-        name2 = input2.nextLine();
-
-        System.out.println(name1);
-        System.out.println(name2);
-        */
+        name1 = names.nextLine();
+        System.out.print(languageArray[3]);
+        name2 = names.nextLine();
     }
 }
