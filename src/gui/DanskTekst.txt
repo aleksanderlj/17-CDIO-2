@@ -1,0 +1,20 @@
+Du har valgt at spille spillet på dansk.
+Skriv de to slags terninger, som spillet skal spille med.
+Indskriv spiller 1's navn:
+Indskriv spiller 2's navn:
+ tur, tryk på Enter for at rulle terningerne.
+Din score er nu:
+ har fået over 3000 point!!! Du har vundet.
+Begge spillere har vundet, da i begge er over 3000 point!!!
+
+Du har fundet et tårn.
+Du har fundet et krater.
+Du har fundet et palace.
+Du har fundet en kold ørken.
+Du har fundet en bymur.
+Du har fundet et kloster.
+Du har fundet en mørk hule.
+Du har fundet hytter på et bjerg.
+Du har fundet en vareulfvæg?.
+Du har fundet en grotte.
+DU HAR FUNDET EN GULDMINE!!!!!

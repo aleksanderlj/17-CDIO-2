@@ -1,0 +1,20 @@
+you have chosen to play the game in english.
+Write the two kinds of dies, the game will be played with.
+Write player 1's name:
+Write player 2's name:
+ turn, press Enter to roll the dies.
+Your score is now:
+ have gotten more than 3000 points!!! You have won.
+Both Players have won, because you both got over 3000 points!!!
+
+You have found a tower.
+You have found a crater.
+You have found a palace.
+You have found a cold desert.
+You have found a walled city.
+You have found a monastery.
+You have found a black cave.
+You have found huts in the mountain.
+You have found the werewall.
+You have found the pit.
+YOU HAVE FOUND A GOLDMINE!!!!!
