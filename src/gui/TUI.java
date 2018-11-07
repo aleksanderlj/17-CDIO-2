@@ -68,7 +68,7 @@ public class TUI {
     }
 
     public static void printFaceValue(){
-        System.out.println(languageArray[6] + Game.getDieFaceValue(0) + " + " + Game.getDieFaceValue(1) + " = " + getRollSum());
+        System.out.println(languageArray[6] + Game.getDieFaceValue(0) + " + " + Game.getDieFaceValue(1) + " = " + Game.getRollSum());
     }
 
     public static void printPlayerScore(int player){
