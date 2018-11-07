@@ -1,5 +1,5 @@
 package gui;
-// Jonatan 10:30 - 12:40. 11:45 - 14:30
+// Jonatan 10:30 - 12:40. 11:45 - 14:40
 import spil.Player;
 
 import java.util.Scanner;
@@ -8,6 +8,9 @@ public class TUI {
     private static String[] languageArray, nameArray;
     private static String name1, name2;
 
+    //--------------------------------------
+    // Printer den første tekst i programmet
+    //--------------------------------------
     private static void startGame() {
         String startGame;
         startGame = "Velkommen til spillet Goldmine (Welcome to the game Goldmine).\n";
@@ -19,6 +22,9 @@ public class TUI {
         System.out.println(changeLanguage);
     }
 
+    //--------------------------------
+    // Tager input, til at vælge sprog
+    //--------------------------------
     public static int language(){
         Scanner input1 = new Scanner(System.in);
         int chosenLanguage;
@@ -28,13 +34,10 @@ public class TUI {
         return (chosenLanguage);
     }
 
-    public static void printLanguage(){
-        System.out.println(languageArray[0]);
-    }
-
+    //-------------------------
+    // Spillere vælger navne
+    //-------------------------
     public static void chooseNames() {
-        languageArray = Language.getLanguage();
-
         Scanner names = new Scanner(System.in);
         System.out.print(languageArray[2]);
         name1 = names.nextLine();
@@ -43,8 +46,18 @@ public class TUI {
         nameArray = new String[] {name1,name2};
     }
 
+    //-------------------------
+    // Gettter
+    //-------------------------
     public static String[] getNames(){
         return (nameArray);
+    }
+
+    //-------------------------
+    // Printere til UI
+    //-------------------------
+    public static void printLanguage(){
+        System.out.println(languageArray[0]);
     }
 
     public static void printPlayersTurn(Player player){
