@@ -32,9 +32,11 @@ public class Goldmine {
 
 
         // Play game
+        /*
         do {
 
         } while (!Game.isWinner());
+        */
 
         // Win + end game
     }
