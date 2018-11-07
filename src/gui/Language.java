@@ -11,15 +11,10 @@ public class Language {
 
     // Denne metode finder ud af hvilket sprog, resten af det grafiske skal være på, og finder de rigtige linjer.
 
-    public static String[] choseLanguage(){
+    public static String[] chooseLanguage(int a){
         languageArray = new String[20];
 
-        Scanner input1 = new Scanner(System.in);
-        int chosenLanguage;
-        chosenLanguage = input1.nextInt();
-        //input1.close();
-
-        if (chosenLanguage == 1){
+        if (a == 1){
             try {
                 String file = "src/gui/DanskTekst.txt";
                 BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -50,5 +45,9 @@ public class Language {
 
         }
         return (languageArray);
+    }
+
+    public static String[] getLanguage(){
+        return (chooseLanguage(TUI.language()));
     }
 }
