@@ -9,12 +9,12 @@ package spil;
 public class Game {
     public static final int WINSCORE = 3000;
     private static int[] scoreTable = {0, 250, -100, 100, -20, 180, 0, -70, 60, -80, -50, 650};
+    private static int rollSum;
 
     //-----------------------------------------------------------------------------------------
     // Kører en enkelt tur for en enkel spiller. Hvis spilleren slå 10, får han en ekstra tur.
     //-----------------------------------------------------------------------------------------
     public static void round(Player player, Die d1, Die d2){
-        int rollSum;
         do {
             rollSum = d1.rul() + d2.rul();
             int score = score(rollSum);
@@ -52,5 +52,12 @@ public class Game {
             winner = "Ingen";
 
         return winner;
+    }
+
+    //--------------------
+    // Getters og setters
+    //--------------------
+    public static int getRollSum(){
+        return rollSum;
     }
 }
