@@ -37,20 +37,15 @@ public class Game {
     }
     */
 
-    //--------------------------------------------------------------------------------------------------
-    // Laver et par terninger og sørger for, at de samlede ansigter ikke overstiger 12 eller er under 2
-    //--------------------------------------------------------------------------------------------------
+    //------------------------
+    // Laver et par terninger
+    //------------------------
     public static void createDiePair(int face1, int face2){
-        int faceSum = face1 + face2;
-        boolean correctDieValue = (((faceSum <= 12) && (faceSum >= 2)) &&
-                                  ((face1 < 12) && (face1 > 0)) &&
-                                  ((face2 < 12) && (face2 > 0))); //Det her skal måske stå i main
-        if (correctDieValue){
-            die[0] = new Die(face1);
-            die[1] = new Die(face2);
-        }
+        die[0] = new Die(face1);
+        die[1] = new Die(face2);
     }
 
+    /*
     //------------------------------
     // Laver en spiller med et navn
     //------------------------------
@@ -58,15 +53,24 @@ public class Game {
         player[playerIndex] = new Player(name);
         playerIndex++;
     }
+    */
+
+    //-----------------------
+    // Laver et par spillere
+    //-----------------------
+    public static void createPlayerPair(String name1, String name2){
+        player[0] = new Player(name1);
+        player[1] = new Player(name2);
+    }
 
     //-----------------------------------------------------------------------------------------
     // Kører en enkelt tur for en enkel spiller. Hvis spilleren slå 10, får han en ekstra tur.
     //-----------------------------------------------------------------------------------------
-    public static void round(Player player, Die d1, Die d2){
+    public static void round(int playerIndex){
         do {
-            rollSum = d1.rul() + d2.rul();
+            rollSum = die[0].rul() + die[1].rul();
             int score = score(rollSum);
-            player.addScore(score);
+            player[playerIndex].addScore(score);
         } while(rollSum == 10);
     }
 
@@ -80,22 +84,22 @@ public class Game {
     //------------------------------------------------------------------------------
     // Returnerer true hvis der er en potentiel vinder eller false hvis der ikke er
     //------------------------------------------------------------------------------
-    public static boolean isWinner(Player p1, Player p2){
-        return ((p1.getScore() >= WINSCORE) || (p2.getScore() >= WINSCORE));
+    public static boolean isWinner(){
+        return ((player[0].getScore() >= WINSCORE) || (player[1].getScore() >= WINSCORE));
     }
 
     //-------------------------------------------
     // Printer navnet på vinderen hvis der er en
     //-------------------------------------------
-    public static String winner(Player p1, Player p2){
+    public static String winner(){
         String winner;
 
-        if ((p1.getScore() >= WINSCORE) && (p2.getScore() >= WINSCORE))
+        if ((player[0].getScore() >= WINSCORE) && (player[1].getScore() >= WINSCORE))
             winner = "Begge";
-        else if (p1.getScore() >= WINSCORE)
-            winner = p1.getName();
-        else if (p2.getScore() >= WINSCORE)
-            winner = p2.getName();
+        else if (player[0].getScore() >= WINSCORE)
+            winner = player[0].getName();
+        else if (player[1].getScore() >= WINSCORE)
+            winner = player[1].getName();
         else
             winner = "Ingen";
 
