@@ -13,9 +13,9 @@ public class Goldmine {
         do {
             TUI.printChooseDice();
             int dieFace1 = TUI.getDieFace(0);
-            int dieFace2 = TUI.getDieFace(1)
+            int dieFace2 = TUI.getDieFace(1);
             Game.createDiePair(dieFace1, dieFace2);
-        } while ()
+        } while ();
 
         // Choose name
         TUI.chooseNames();
