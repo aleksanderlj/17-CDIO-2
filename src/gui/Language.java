@@ -32,7 +32,7 @@ public class Language {
             try {
                 String file = "src/gui/EngelskTekst.txt";
                 BufferedReader reader = new BufferedReader(new FileReader(file));
-                for (int i = 0;(i < 10);i++) {
+                for (int i = 0;(i < 20);i++) {
                     String currentLine = reader.readLine();
                     languageArray[i] = currentLine;
                 }

@@ -1,4 +1,4 @@
-you have chosen to play the game in english.
+You have chosen to play the game in english.
 Write the two kinds of dies, the game will be played with.
 Write player 1's name:
 Write player 2's name:

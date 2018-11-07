@@ -1,5 +1,5 @@
 package gui;
-// Jonatan 10:30 - 12:40. 11:45
+// Jonatan 10:30 - 12:40. 11:45 - 14:30
 import spil.Player;
 
 import java.util.Scanner;
@@ -25,8 +25,6 @@ public class TUI {
         chosenLanguage = input1.nextInt();
 
         languageArray = Language.chooseLanguage(chosenLanguage);
-        //System.out.println(languageArray[0] + "\n");
-
         return (chosenLanguage);
     }
 
@@ -63,5 +61,14 @@ public class TUI {
 
     public static void printWin2(){
         System.out.println(languageArray[7]);
+    }
+
+    public static void printEndTurn(int input){
+        if (input >= 0/*9*/ && input <= 19) {
+            System.out.println(languageArray[input]);
+        }
+        else{
+            System.out.println("FEJL");
+        }
     }
 }
