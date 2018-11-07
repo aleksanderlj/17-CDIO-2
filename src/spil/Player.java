@@ -42,7 +42,11 @@ public class Player {
         this.name = name;
     }
 
-    public int getScore(){ return konto.getScore(); }
+    public int getScore(){
+        return konto.getScore();
+    }
 
-    public void setScore(int score) { konto.setScore(score); }
+    public void setScore(int score){
+        konto.setScore(score);
+    }
 }
