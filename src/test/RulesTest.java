@@ -15,7 +15,7 @@ public class RulesTest {
     void minimum(){
         spil.Account testKonto = new Account();
         for (int i = 0; i < 30; i++) {
-            testKonto.addScore(GameStub.scoreStub());
+            testKonto.addScore(GameStub.minusscoreStub());
         }
         assertTrue(testKonto.getScore()==0);
     }
@@ -24,6 +24,7 @@ public class RulesTest {
 
     @Test
     void vinde(){
+
 
     }
 
