@@ -1,12 +1,13 @@
 package gui;
-// Jonatan 10:30 - 12:40. 11:45 - 14:40
+// Jonatan 10:30 - 12:40. 11:45 - 15:
+import spil.Game;
 import spil.Player;
 
 import java.util.Scanner;
 
 public class TUI {
     private static String[] languageArray, nameArray;
-    private static String name1, name2;
+    private static int[] dieArray;
 
     //--------------------------------------
     // Printer den første tekst i programmet
@@ -39,18 +40,11 @@ public class TUI {
     //-------------------------
     public static void chooseNames() {
         Scanner names = new Scanner(System.in);
-        System.out.print(languageArray[2]);
-        name1 = names.nextLine();
         System.out.print(languageArray[3]);
-        name2 = names.nextLine();
+        String name1 = names.nextLine();
+        System.out.print(languageArray[4]);
+        String name2 = names.nextLine();
         nameArray = new String[] {name1,name2};
-    }
-
-    //-------------------------
-    // Gettter
-    //-------------------------
-    public static String[] getNames(){
-        return (nameArray);
     }
 
     //-------------------------
@@ -60,28 +54,52 @@ public class TUI {
         System.out.println(languageArray[0]);
     }
 
-    public static void printPlayersTurn(Player player){
-        System.out.println(player.getName() + "'s" + languageArray[4]);
+    public static void printChooseDice(){
+        Scanner input = new Scanner(System.in);
+        System.out.print(languageArray[1]);
+        int die1 = input.nextInt();
+        int die2 = input.nextInt();
+        System.out.println(languageArray[2] + die1 + " " + die2);
+        dieArray = new int[] {die1, die2};
     }
 
-    public static void printPlayerScore(int score){
-        System.out.println(languageArray[5] + score);
+    public static void printPlayersTurn(int player){
+        System.out.println(Game.getPlayerName(player) + "'s" + languageArray[5]);
     }
 
-    public static void printWin1(Player player){
-        System.out.println(player.getName() + languageArray[6]);
+    public static void printFaceValue(){
+        System.out.println(languageArray[6] + Game.getDieFaceValue(0) + " + " + Game.getDieFaceValue(1) + " = " + getRollSum());
+    }
+
+    public static void printPlayerScore(int player){
+        System.out.println(languageArray[7] + Game.getPlayerScore(player));
+    }
+
+    public static void printWin1(int player){
+        System.out.println(Game.getPlayerName(player) + languageArray[8]);
     }
 
     public static void printWin2(){
-        System.out.println(languageArray[7]);
+        System.out.println(languageArray[9]);
     }
 
     public static void printEndTurn(int input){
-        if (input >= 0/*9*/ && input <= 19) {
+        if (input >= 10 && input <= 20) {
             System.out.println(languageArray[input]);
         }
         else{
             System.out.println("FEJL");
         }
+    }
+
+    //-------------------------
+    // Gettter
+    //-------------------------
+    public static String getName(int nameIndex) {
+        return nameArray[nameIndex];
+    }
+
+    public static int getDieFace(int dieIndex){
+        return dieArray[dieIndex];
     }
 }

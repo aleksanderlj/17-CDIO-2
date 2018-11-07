@@ -1,8 +1,10 @@
 You have chosen to play the game in english.
-Write the two kinds of dies, the game will be played with.
+Write the two kinds of dies, the game will be played with:
+You have chosen these dies:
 Write player 1's name:
 Write player 2's name:
  turn, press Enter to roll the dies.
+You rolled:
 Your score is now:
  have gotten more than 3000 points!!! You have won.
 Both Players have won, because you both got over 3000 points!!!

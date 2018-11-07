@@ -1,8 +1,10 @@
 Du har valgt at spille spillet på dansk.
-Skriv de to slags terninger, som spillet skal spille med.
+Skriv de to slags terninger, som spillet skal spilles med:
+I har valgt terningerne:
 Indskriv spiller 1's navn:
 Indskriv spiller 2's navn:
  tur, tryk på Enter for at rulle terningerne.
+Du slog:
 Din score er nu:
  har fået over 3000 point!!! Du har vundet.
 Begge spillere har vundet, da i begge er over 3000 point!!!
