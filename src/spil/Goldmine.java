@@ -6,6 +6,7 @@ public class Goldmine {
     public static void main(String[] args){
         boolean correctDieValue;
         String namePlayer1, namePlayer2;
+        int winner;
 
         // Choose language
         TUI.startGame();
@@ -35,12 +36,38 @@ public class Goldmine {
 
 
         // Play game
-        /*
+
         do {
 
+            do {
+                TUI.printPlayersTurn(0);
+                Game.round(0);
+                TUI.printFaceValue();
+                TUI.printEndTurn(Game.getRollSum());
+                TUI.printPlayerScore(0);
+            } while(Game.getRollSum() == 10);
+
+            do {
+                TUI.printPlayersTurn(1);
+                Game.round(1);
+                TUI.printFaceValue();
+                TUI.printEndTurn(Game.getRollSum());
+                TUI.printPlayerScore(1);
+            } while(Game.getRollSum() == 10);
+
         } while (!Game.isWinner());
-        */
 
         // Win + end game
+
+        winner = Game.winner();
+
+        if (winner == 3){
+            TUI.printWin2();
+        }
+        else{
+            TUI.printWin1(winner - 1);
+        }
+
+
     }
 }
