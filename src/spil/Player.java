@@ -20,7 +20,6 @@ public class Player {
         this.konto = konto;
     }
 
-
     //-----------------------------------------------------------------
     // Lægger nye points til spillerens score, som ligger i hans konto
     //-----------------------------------------------------------------
