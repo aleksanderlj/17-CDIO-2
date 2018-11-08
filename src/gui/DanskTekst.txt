@@ -6,7 +6,7 @@ Indskriv spiller 2's navn:
  tur, tryk på Enter for at rulle terningerne.
 Du slog:
 Din score er nu:
- har fået over 3000 point!!! Du har vundet.
+ har fået over 3000 point!!! Du har vundet!
 Begge spillere har vundet, da i begge har over 3000 point!!!
 
 Mens du går hen af en grus-sti ser du et tårn. Inde i tårnet finder du en kiste med 250 guld. (+250)

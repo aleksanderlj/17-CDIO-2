@@ -8,7 +8,6 @@
 package spil;
 
 public class Player {
-
     private Account konto;
     private String name;
 
