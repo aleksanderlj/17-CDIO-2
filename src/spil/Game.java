@@ -67,11 +67,9 @@ public class Game {
     // Kører en enkelt tur for en enkel spiller. Hvis spilleren slå 10, får han en ekstra tur.
     //-----------------------------------------------------------------------------------------
     public static void round(int playerIndex){
-        do {
-            rollSum = die[0].rul() + die[1].rul();
-            int score = score(rollSum);
-            player[playerIndex].addScore(score);
-        } while(rollSum == 10);
+        rollSum = die[0].rul() + die[1].rul();
+        int score = score(rollSum);
+        player[playerIndex].addScore(score);
     }
 
     //--------------------------------------------
