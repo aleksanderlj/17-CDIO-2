@@ -203,6 +203,5 @@ class DieTest {
         System.out.println("");
         System.out.println("Antal gange der blev slået ens øjne ud af " + ANTALTEST + " er: " + ens);
         assertTrue(ens <= ANTALTEST * (1.0/6) * 1.04 && ens >= ANTALTEST * (1.0/6) * 0.96);
-
     }
 }
