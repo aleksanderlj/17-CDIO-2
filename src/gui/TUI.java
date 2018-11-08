@@ -3,6 +3,7 @@ package gui;
 import spil.Game;
 import spil.Player;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TUI {
@@ -27,9 +28,17 @@ public class TUI {
     // Tager input, til at vælge sprog
     //--------------------------------
     public static int language(){
-        Scanner input1 = new Scanner(System.in);
         int chosenLanguage;
-        chosenLanguage = input1.nextInt();
+
+        do {
+            try {
+                Scanner input1 = new Scanner(System.in);
+                chosenLanguage = input1.nextInt();
+            }
+            catch (InputMismatchException e){
+                chosenLanguage = 0;
+            }
+        } while ((chosenLanguage != 1) && (chosenLanguage != 2));
 
         languageArray = Language.chooseLanguage(chosenLanguage);
         return (chosenLanguage);
@@ -40,9 +49,9 @@ public class TUI {
     //-------------------------
     public static void chooseNames() {
         Scanner names = new Scanner(System.in);
-        System.out.print(languageArray[3]);
+        System.out.println(languageArray[3]);
         String name1 = names.nextLine();
-        System.out.print(languageArray[4]);
+        System.out.println(languageArray[4]);
         String name2 = names.nextLine();
         nameArray = new String[] {name1,name2};
     }
@@ -55,24 +64,36 @@ public class TUI {
     }
 
     public static void printChooseDice(){
-        Scanner input = new Scanner(System.in);
-        System.out.print(languageArray[1]);
-        int die1 = input.nextInt();
-        int die2 = input.nextInt();
-        System.out.println(languageArray[2] + die1 + " " + die2);
-        dieArray = new int[] {die1, die2};
+        boolean areNumbers;
+
+        do {
+            try {
+                Scanner input = new Scanner(System.in);
+                System.out.println(languageArray[1]);
+                int die1 = input.nextInt();
+                int die2 = input.nextInt();
+                System.out.println(languageArray[2] + " " + die1 + " & " + die2);
+                dieArray = new int[]{die1, die2};
+                areNumbers = true;
+            }
+            catch (InputMismatchException e){
+                areNumbers = false;
+            }
+        } while (!areNumbers);
     }
 
     public static void printPlayersTurn(int player){
+        Scanner input = new Scanner(System.in);
         System.out.println(Game.getPlayerName(player) + "'s" + languageArray[5]);
+        input.nextLine();
     }
 
     public static void printFaceValue(){
-        System.out.println(languageArray[6] + Game.getDieFaceValue(0) + " + " + Game.getDieFaceValue(1) + " = " + Game.getRollSum());
+        System.out.println(languageArray[6] + " " + Game.getDieFaceValue(0) + " + " + Game.getDieFaceValue(1) + " = " + Game.getRollSum());
     }
 
     public static void printPlayerScore(int player){
-        System.out.println(languageArray[7] + Game.getPlayerScore(player));
+        System.out.println(languageArray[7] + " " + Game.getPlayerScore(player));
     }
 
     public static void printWin1(int player){
@@ -84,8 +105,9 @@ public class TUI {
     }
 
     public static void printEndTurn(int input){
-        if ((input >= 11) && (input <= 21)) {
-            System.out.println(languageArray[input]);
+        int line = input + 9;
+        if ((line >= 11) && (line <= 21)) {
+            System.out.println(languageArray[line]);
         }
         else{
             System.out.println("FEJL");

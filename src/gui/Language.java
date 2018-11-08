@@ -12,13 +12,13 @@ public class Language {
     // Læser den rigtige sprog fil, og deler den op i et array
     //--------------------------------------------------------
     public static String[] chooseLanguage(int a) {
-        languageArray = new String[21];
+        languageArray = new String[22];
 
         if (a == 1) {
             try {
                 String file = "src/gui/DanskTekst.txt";
                 BufferedReader reader = new BufferedReader(new FileReader(file));
-                for (int i = 0; (i < 21); i++) {
+                for (int i = 0; (i < 22); i++) {
                     currentLine = reader.readLine();
                     languageArray[i] = currentLine;
                 }
@@ -32,7 +32,7 @@ public class Language {
             try {
                 String file = "src/gui/EngelskTekst.txt";
                 BufferedReader reader = new BufferedReader(new FileReader(file));
-                for (int i = 0; (i < 21); i++) {
+                for (int i = 0; (i < 22); i++) {
                     String currentLine = reader.readLine();
                     languageArray[i] = currentLine;
                 }

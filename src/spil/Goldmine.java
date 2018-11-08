@@ -45,6 +45,7 @@ public class Goldmine {
                 TUI.printFaceValue();
                 TUI.printEndTurn(Game.getRollSum());
                 TUI.printPlayerScore(0);
+                System.out.println();
             } while(Game.getRollSum() == 10);
 
             do {
@@ -53,6 +54,7 @@ public class Goldmine {
                 TUI.printFaceValue();
                 TUI.printEndTurn(Game.getRollSum());
                 TUI.printPlayerScore(1);
+                System.out.println();
             } while(Game.getRollSum() == 10);
 
         } while (!Game.isWinner());

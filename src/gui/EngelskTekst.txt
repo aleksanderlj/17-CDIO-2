@@ -6,7 +6,7 @@ Write player 2's name:
  turn, press Enter to roll the dies.
 You rolled:
 Your score is now:
- has gotten more than 3000 points!!! You have won.
+ has gotten more than 3000 points!!! You have won!
 Both Players have won, since you both got over 3000 points!!!
 
 While walking along a dirt path, you come across a tower. Inside you find a chest with 250 gold. (+250)
