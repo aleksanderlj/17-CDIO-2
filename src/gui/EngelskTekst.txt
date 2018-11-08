@@ -3,7 +3,7 @@ Write the amount of faces on the two dice the game will be played with (combined
 You have chosen these dice:
 Write player 1's name:
 Write player 2's name:
- turn, press Enter to roll the dies.
+ turn, press Enter to roll the dice.
 You rolled:
 Your score is now:
  has gotten more than 3000 points!!! You have won!
