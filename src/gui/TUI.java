@@ -84,7 +84,7 @@ public class TUI {
     }
 
     public static void printEndTurn(int input){
-        if (input >= 10 && input <= 20) {
+        if ((input >= 11) && (input <= 21)) {
             System.out.println(languageArray[input]);
         }
         else{
