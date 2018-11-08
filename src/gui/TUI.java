@@ -7,7 +7,6 @@
 package gui;
 // Jonatan 10:30 - 12:40. 11:45 - 15:
 import spil.Game;
-import spil.Player;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

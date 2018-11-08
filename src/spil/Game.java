@@ -11,9 +11,7 @@ public class Game {
     private static int[] scoreTable = {0, 250, -100, 100, -20, 180, 0, -70, 60, -80, -50, 650};
     private static int rollSum;
     private static Die[] die = new Die[2];
-    private static int dieIndex = 0;
     private static Player[] player = new Player[2];
-    private static int playerIndex = 0;
 
 
     //------------------------
