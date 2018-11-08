@@ -1,0 +1,22 @@
+Du har valgt at spille spillet på dansk.
+Skriv antallet af ansigter på de to terninger, som spillet skal spilles med (samlede ansigter skal være 12 eller under!):
+I har valgt terningerne:
+Indskriv spiller 1's navn:
+Indskriv spiller 2's navn:
+ tur, tryk på Enter for at rulle terningerne.
+Du slog:
+Din score er nu:
+ har fået over 3000 point!!! Du har vundet!
+Begge spillere har vundet, da i begge har over 3000 point!!!
+
+Mens du går hen af en grus-sti ser du et tårn. Inde i tårnet finder du en kiste med 250 guld. (+250)
+Mens du går taber du ved et uheld 100 guld ned i et krater. (-100)
+På din rejse ser du et palads. Ejeren inviterer dig indenfor for at hvile og den næste dag giver han dig nogle forsyninger til din rejse (+100)
+Du falder om a udmattelse efter at have vandret gennem en kold ørken. Banditter røver dig mens du sover. (-20)
+Du finder en by. Her sælger du lidt af de værdier du har fået samlet gennem din rejse. (+180)
+Du møder nogle monke. Selvom de ikke har meget, inviterer de dig til at hvile i deres kloster. (0)
+Du udforkser en mørk hule. En bjørn hopper ud fra mørket og du løber! Du taber nogle forsyninger mens du løber væk. (-70)
+Du finder nogle forladte hytter på et bjerg. Du vælger at plyndre dem. (+60)
+Du har fundet vareulfvæggen. Om dagen er det en mand. Om natten er det en væg. (-80 + Ekstra tur!)
+Du stirrer ned i afgrunden. Afgrunden stirrer tilbage. Den stjæler også 50 guld... (-50)
+DU FINDER EN GULDMINE!!!!! (+650)

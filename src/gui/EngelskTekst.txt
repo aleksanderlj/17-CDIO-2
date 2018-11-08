@@ -1,0 +1,22 @@
+You have chosen to play the game in english.
+Write the amount of faces on the two dice the game will be played with (combined value must be 12 or less!):
+You have chosen these dice:
+Write player 1's name:
+Write player 2's name:
+ turn, press Enter to roll the dice.
+You rolled:
+Your score is now:
+ has gotten more than 3000 points!!! You have won!
+Both Players have won, since you both got over 3000 points!!!
+
+While walking along a dirt path, you come across a tower. Inside you find a chest with 250 gold. (+250)
+While walking, you accidentally drop 100 gold into a crater. (-100)
+In your travels you happen upon a palace. There the owner invites you to rest and the next morning he gives you some supplies for your journey. (+100)
+You pass out from exhaustion after wandering through a cold desert. Bandits loot you while your still asleep. (-20)
+You reach a walled city. There you sell some of the loot you have gathered thus far. (+180)
+You meet some monks. Though they don't have much, they do invite you to rest at their monastery. (0)
+You enter a dark cave. A bear jumps out from the dark and you run! You dropped some supplies in your hurry to get away. (-70)
+You find some abandoned huts in a mountain. You decide to loot them. (+60)
+You have found the werewall. By day, it is a man. But by night, it is a wall. (-80 + Extra turn!)
+You stared into the pit. The pit stared back. It also stole 50 gold... (-50)
+YOU FOUND A GOLDMINE!!!!! (+650)

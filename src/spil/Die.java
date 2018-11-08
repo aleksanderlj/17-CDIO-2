@@ -1,7 +1,7 @@
 //******************************************************************
 //  Die.java        Author: Gruppe 17
 //
-//  Repræsenterer én terning med værdier svarende til 6 sider.
+//  Repræsenterer én terning med et antal sider.
 //******************************************************************
 
 package spil;
@@ -10,8 +10,7 @@ import java.util.Random;
 
 public class Die {
 private int faceValue;
-public int faceAmount;
-
+private int faceAmount;
 
     //---------------------------
     //Constructor for Die klassen
@@ -19,9 +18,6 @@ public int faceAmount;
     public Die(int faceAmount){
         this.faceAmount = faceAmount;
     }
-
-
-
 
     //-----------------------------------
     //Ruller terning og returner resultatet
@@ -31,8 +27,6 @@ public int faceAmount;
         this.faceValue = r.nextInt(this.faceAmount) + 1;
         return this.faceValue;
     }
-
-
 
     //-------------------
     //Getters og setters

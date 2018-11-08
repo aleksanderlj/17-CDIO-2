@@ -13,7 +13,7 @@ public class Account {
     // Lægger point til scoren
     //-------------------------
     public int addScore(int point){
-        this.score =+ point;
+        this.score += point;
         if (this.score < 0)
             this.score = 0;
         return this.score;
@@ -26,7 +26,9 @@ public class Account {
         return this.score;
     }
 
-    public void setScore(int score) {
+    public void setScore(int score){
         this.score = score;
+        if (this.score < 0)
+            this.score = 0;
     }
 }

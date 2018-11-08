@@ -8,7 +8,6 @@
 package spil;
 
 public class Player {
-
     private Account konto;
     private String name;
 
@@ -20,7 +19,6 @@ public class Player {
         this.name = name;
         this.konto = konto;
     }
-
 
     //-----------------------------------------------------------------
     // Lægger nye points til spillerens score, som ligger i hans konto
@@ -42,7 +40,11 @@ public class Player {
         this.name = name;
     }
 
-    public int getScore(){ return konto.getScore(); }
+    public int getScore(){
+        return konto.getScore();
+    }
 
-    public void setScore(int score) { konto.setScore(score); }
+    public void setScore(int score){
+        konto.setScore(score);
+    }
 }
