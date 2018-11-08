@@ -1,8 +1,8 @@
-//******************************************************************
+//**************************************************************************
 //  Game.java        Author: Gruppe 17
 //
-//  Styrer spillets regler.
-//******************************************************************
+//  Styrer spillets gang og regler. Holder også spiller og terning objekter
+//**************************************************************************
 
 package spil;
 
@@ -15,27 +15,6 @@ public class Game {
     private static Player[] player = new Player[2];
     private static int playerIndex = 0;
 
-    /*
-    //----------------------------------------------------------------------
-    // Laver en terning og sørger for at øjenene ikke er over 11 og under 1
-    //----------------------------------------------------------------------
-    public static void createDie(int face){
-        if ((face < 12) && (face > 0)){
-            die[dieIndex] = new Die(face);
-            dieIndex++;
-        }
-    }
-    */
-
-    /*
-    //------------------------------------------------------
-    // Laver et par terninger som tilsammen har 12 ansigter
-    //------------------------------------------------------
-    public static void createDiePair12(int face){
-        createDie(face);
-        createDie(12 - face);
-    }
-    */
 
     //------------------------
     // Laver et par terninger
@@ -44,16 +23,6 @@ public class Game {
         die[0] = new Die(face1);
         die[1] = new Die(face2);
     }
-
-    /*
-    //------------------------------
-    // Laver en spiller med et navn
-    //------------------------------
-    public static void createPlayer(String name){
-        player[playerIndex] = new Player(name);
-        playerIndex++;
-    }
-    */
 
     //-----------------------
     // Laver et par spillere
@@ -119,3 +88,39 @@ public class Game {
         return player[playerIndex].getScore();
     }
 }
+
+//------------
+// OLD STUFFS
+//------------
+
+ /*
+    //----------------------------------------------------------------------
+    // Laver en terning og sørger for at øjenene ikke er over 11 og under 1
+    //----------------------------------------------------------------------
+    public static void createDie(int face){
+        if ((face < 12) && (face > 0)){
+            die[dieIndex] = new Die(face);
+            dieIndex++;
+        }
+    }
+    */
+
+    /*
+    //------------------------------------------------------
+    // Laver et par terninger som tilsammen har 12 ansigter
+    //------------------------------------------------------
+    public static void createDiePair12(int face){
+        createDie(face);
+        createDie(12 - face);
+    }
+    */
+
+     /*
+    //------------------------------
+    // Laver en spiller med et navn
+    //------------------------------
+    public static void createPlayer(String name){
+        player[playerIndex] = new Player(name);
+        playerIndex++;
+    }
+    */

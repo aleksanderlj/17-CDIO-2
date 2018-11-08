@@ -1,3 +1,9 @@
+//******************************************************************
+//  Language.java        Author: Gruppe 17
+//
+//  Styrer hvilke sprog bliver valgt
+//******************************************************************
+
 package gui;
 
 import java.io.BufferedReader;

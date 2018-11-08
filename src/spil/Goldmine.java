@@ -1,3 +1,9 @@
+//**************************************************************************
+//  Goldmine.java        Author: Gruppe 17
+//
+//  Main metode. Bruger TUI.java og Game.java til at køre spillet
+//**************************************************************************
+
 package spil;
 
 import gui.*;

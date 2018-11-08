@@ -1,3 +1,9 @@
+//******************************************************************
+//  TUI.java        Author: Gruppe 17
+//
+//  Styrer input fra spiller og interface
+//******************************************************************
+
 package gui;
 // Jonatan 10:30 - 12:40. 11:45 - 15:
 import spil.Game;
@@ -25,7 +31,7 @@ public class TUI {
     }
 
     //--------------------------------
-    // Tager input, til at vælge sprog
+    // Tager input til at vælge sprog
     //--------------------------------
     public static int language(){
         int chosenLanguage;
@@ -56,13 +62,16 @@ public class TUI {
         nameArray = new String[] {name1,name2};
     }
 
-    //-------------------------
-    // Printere til UI
-    //-------------------------
+    //----------------------------------------------
+    // Fortæller spiller hvilket sprog de har valgt
+    //----------------------------------------------
     public static void printLanguage(){
         System.out.println(languageArray[0]);
     }
 
+    //---------------------------------------
+    // Får værdier til skabelse af terninger
+    //---------------------------------------
     public static void printChooseDice(){
         boolean areNumbers;
 
@@ -82,28 +91,46 @@ public class TUI {
         } while (!areNumbers);
     }
 
+    //---------------
+    // Spiller tur
+    //---------------
     public static void printPlayersTurn(int player){
         Scanner input = new Scanner(System.in);
         System.out.println(Game.getPlayerName(player) + "'s" + languageArray[5]);
         input.nextLine();
     }
 
+    //-----------------------------
+    // Fortæller hvad spiller slog
+    //-----------------------------
     public static void printFaceValue(){
         System.out.println(languageArray[6] + " " + Game.getDieFaceValue(0) + " + " + Game.getDieFaceValue(1) + " = " + Game.getRollSum());
     }
 
+    //--------------------------------
+    // Fortæller spillerens nye score
+    //--------------------------------
     public static void printPlayerScore(int player){
         System.out.println(languageArray[7] + " " + Game.getPlayerScore(player));
     }
 
+    //-------------------------------------------
+    // Fortæller spilleren at han/hun har vundet
+    //-------------------------------------------
     public static void printWin1(int player){
         System.out.println(Game.getPlayerName(player) + languageArray[8]);
     }
 
+    //---------------------------------------------
+    // Fortæller spillere hvis de begge har vundet
+    //---------------------------------------------
     public static void printWin2(){
         System.out.println(languageArray[9]);
     }
 
+    //---------------------------------------------------------------
+    // Bruger flavor-text til at forklare spillerens ændring i score
+    //---------------------------------------------------------------
     public static void printEndTurn(int input){
         int line = input + 9;
         if ((line >= 11) && (line <= 21)) {
@@ -114,9 +141,9 @@ public class TUI {
         }
     }
 
-    //-------------------------
-    // Gettter
-    //-------------------------
+    //----------
+    // Gettters
+    //----------
     public static String getName(int nameIndex) {
         return nameArray[nameIndex];
     }
